@@ -1,29 +1,17 @@
-// asad_portfolio/app/page.tsx (for Next.js App Router)
+// pages/index.js
 
-"use client";
-
-import { useEffect } from "react";
+import Head from 'next/head'
 
 export default function Home() {
-  useEffect(() => {
-    const links = document.querySelectorAll("a[href^='#']");
-    links.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const target = document.querySelector(
-          (link as HTMLAnchorElement).getAttribute("href")!
-        );
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    });
-  }, []);
-
   return (
-    <main className="bg-gray-900 text-white font-sans">
+    <div className="bg-gray-900 text-white font-sans min-h-screen">
+      <Head>
+        <title>Syed Asad Ali Sherazi | AI Engineer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+
       {/* Navbar */}
-      <nav className="fixed top-0 w-full bg-gray-800 p-4 z-50 shadow-md">
+      <nav className="fixed top-0 left-0 w-full bg-gray-800 p-4 z-50 shadow-md">
         <ul className="flex justify-center gap-6 text-sm font-medium">
           <li><a href="#hero" className="hover:text-blue-400">Home</a></li>
           <li><a href="#about" className="hover:text-blue-400">About</a></li>
@@ -135,6 +123,6 @@ export default function Home() {
         <p>💼 <a href="https://www.linkedin.com/in/syed-asad-ali-sherazi-4366802a0/" className="text-blue-400 underline">LinkedIn</a></p>
         <p>🧑‍💻 <a href="https://github.com/syedasad15" className="text-blue-400 underline">GitHub</a></p>
       </section>
-    </main>
-  );
+    </div>
+  )
 }
