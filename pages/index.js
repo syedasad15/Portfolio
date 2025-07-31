@@ -55,7 +55,7 @@ export default function Home() {
           ))}
           <li>
             <a
-              href="/resume.pdf"
+              href="/Syed Asad Ali Sherazi.pdf"
               download
               className="relative px-3 py-2 text-gray-200 hover:text-amber-400 transition-colors duration-300 group"
               aria-label="Download Resume"
