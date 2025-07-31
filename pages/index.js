@@ -466,16 +466,18 @@ export default function Home() {
         </ul>
       </nav>
 
-      {/* Hero Section */}
-      <section id="hero" className="h-screen flex flex-col justify-center items-center text-center px-6" role="banner">
-        <motion.img
-          src="/images/profile.jpg"
-          alt="Profile picture of Syed Asad Ali Sherazi"
-          className="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-amber-400 mb-6 object-cover"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-        />
+     {/* Hero Section */}
+<section id="hero" className="h-screen flex flex-col justify-center items-center text-center px-6" role="banner">
+  <motion.img
+    src="/images/profile.jpg"
+    alt="Profile picture of Syed Asad Ali Sherazi"
+    className="w-48 h-48 md:w-60 md:h-60 rounded-full border-2 border-amber-400 mb-6 object-cover"
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.8 }}
+  />
+</section>
+
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
