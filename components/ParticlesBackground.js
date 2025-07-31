@@ -1,11 +1,11 @@
-import { useCallback } from 'react'
-import Particles from 'react-tsparticles'
-import { loadFull } from 'tsparticles'
+import { useCallback } from 'react';
+import Particles from 'react-tsparticles';
+import { loadSlim } from 'tsparticles-slim'; // ✅ use slim version
 
 export default function ParticlesBackground() {
   const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine)
-  }, [])
+    await loadSlim(engine); // ✅ load slim engine
+  }, []);
 
   return (
     <Particles
@@ -24,5 +24,5 @@ export default function ParticlesBackground() {
         background: { color: "#0f172a" }
       }}
     />
-  )
+  );
 }
