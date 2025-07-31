@@ -1,4 +1,4 @@
-```css
+
    @tailwind base;
    @tailwind components;
    @tailwind utilities;
@@ -15,4 +15,4 @@
        @apply font-normal leading-relaxed;
      }
    }
-   ```
+
