@@ -1,27 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+```css
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
 
-body {
-  @apply bg-gradient-to-b from-charcoal-900 to-charcoal-800;
-}
-
-:root {
-  --charcoal-900: #1a202c;
-  --charcoal-800: #2d3748;
-  --burgundy-500: #991b1b;
-  --amber-400: #fbbf24;
-}
-
-@layer base {
-  body {
-    font-family: 'Inter', sans-serif;
-  }
-  h1, h2, h3 {
-    font-weight: 700;
-  }
-  p, li {
-    font-weight: 400;
-    line-height: 1.75;
-  }
-}
+   @layer base {
+     body {
+       @apply bg-gradient-to-b from-charcoal-900 to-charcoal-800 text-gray-100;
+       font-family: 'Inter', sans-serif;
+     }
+     h1, h2, h3 {
+       @apply font-bold;
+     }
+     p, li {
+       @apply font-normal leading-relaxed;
+     }
+   }
+   ```
