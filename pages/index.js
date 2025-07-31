@@ -40,7 +40,7 @@ export default function Home() {
 
       {/* Navbar */}
       <nav className="bg-charcoal-800/90 backdrop-blur-md p-4 shadow-lg fixed top-0 w-full z-50" role="navigation" aria-label="Main navigation">
-        <ul className="flex justify-center gap-8 font-semibold text-lg">
+        <ul className="flex justify-center gap-8 font-semibold text-lg items-center">
           {['About', 'Education', 'Experience', 'Skills', 'Projects', 'Contact'].map((item) => (
             <li key={item}>
               <a
@@ -53,6 +53,17 @@ export default function Home() {
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href="/resume.pdf"
+              download
+              className="relative px-3 py-2 text-gray-200 hover:text-amber-400 transition-colors duration-300 group"
+              aria-label="Download Resume"
+            >
+              Resume
+              <span className="absolute left-0 bottom-0 w-0 h-1 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -138,7 +149,7 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-24 px-6 max-w-4xl mx-auto" role="region" aria-labelledby="experience-heading">
+      <section id="about" className="py-24 px-6 max-w-4xl mx-auto" role="region" aria-labelledby="experience-heading">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -364,46 +375,6 @@ export default function Home() {
             >
               <FaGithub className="mr-2" /> GitHub
             </a>
-          </div>
-          <a
-            href="/resume.pdf"
-            download
-            className="inline-block px-6 py-2 bg-amber-400 text-charcoal-900 rounded-md hover:bg-amber-500 transition-colors duration-300"
-            aria-label="Download Resume"
-          >
-            Download Resume
-          </a>
-          {/* Client-side Contact Form */}
-          <div className="mt-8">
-            <h3 className="text-lg font-semibold text-amber-400 mb-4">Send a Message</h3>
-            <div className="space-y-4">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full p-3 rounded-md bg-charcoal-700 text-gray-100 border border-gray-500 focus:border-amber-400 focus:outline-none"
-                aria-label="Your Name"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full p-3 rounded-md bg-charcoal-700 text-gray-100 border border-gray-500 focus:border-amber-400 focus:outline-none"
-                aria-label="Your Email"
-              />
-              <textarea
-                placeholder="Your Message"
-                rows={4}
-                className="w-full p-3 rounded-md bg-charcoal-700 text-gray-100 border border-gray-500 focus:border-amber-400 focus:outline-none"
-                aria-label="Your Message"
-              ></textarea>
-              <button
-                type="button"
-                className="px-6 py-2 bg-amber-400 text-charcoal-900 rounded-md hover:bg-amber-500 transition-colors duration-300"
-                aria-label="Submit Message"
-                onClick={() => alert('Form submission is client-side only. Please use email for actual contact.')}
-              >
-                Submit
-              </button>
-            </div>
           </div>
         </motion.div>
       </section>
