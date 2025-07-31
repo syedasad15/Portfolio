@@ -228,7 +228,7 @@ export default function Home() {
             },
             {
               title: 'Frameworks & Tools',
-              items: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Hugging Face Transformers', 'BERT', 'LIME', 'LangChain', 'OpenAI API', 'Streamlit', 'Librosa', 'FAISS'],
+              items: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Hugging Face Transformers', 'BERT', 'LIME', 'LangChain','LangGraph', 'OpenAI API', 'Streamlit', 'Librosa', 'FAISS'],
             },
           ].map((category, index) => (
             <motion.div
