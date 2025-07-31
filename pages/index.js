@@ -408,9 +408,6 @@
 //     </div>
 //   );
 // }
-
-
-
 import Head from 'next/head';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -443,7 +440,7 @@ export default function Home() {
         <meta property="og:description" content="Explore the portfolio of an AI Engineer skilled in LLMs, Generative AI, and scalable MLOps pipelines." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://your-portfolio-url.com" />
-        <meta property="og:image" content="/path-to-your-image.jpg" />
+        <meta property="og:image" content="/images/profile.jpg" />
         <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
       </Head>
@@ -471,10 +468,18 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="hero" className="h-screen flex flex-col justify-center items-center text-center px-6" role="banner">
+        <motion.img
+          src="/images/profile.jpg"
+          alt="Profile picture of Syed Asad Ali Sherazi"
+          className="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-amber-400 mb-6 object-cover"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        />
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-burgundy-500 mb-6"
         >
           Syed Asad Ali Sherazi
@@ -482,7 +487,7 @@ export default function Home() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl max-w-3xl text-gray-200 leading-relaxed"
         >
           AI Engineer | Building Innovative Solutions in NLP, Computer Vision, and MLOps
