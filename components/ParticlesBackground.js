@@ -1,10 +1,9 @@
-// components/ParticlesBackground.js
 import { useCallback } from 'react'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
 
 export default function ParticlesBackground() {
-  const particlesInit = useCallback(async engine => {
+  const particlesInit = useCallback(async (engine) => {
     await loadFull(engine)
   }, [])
 
@@ -20,9 +19,9 @@ export default function ParticlesBackground() {
           links: { enable: true, color: "#58a6ff" },
           move: { enable: true, speed: 0.3 },
           size: { value: 2 },
-          opacity: { value: 0.5 },
+          opacity: { value: 0.5 }
         },
-        background: { color: "#0f172a" },
+        background: { color: "#0f172a" }
       }}
     />
   )
