@@ -13,27 +13,27 @@ export default function ParticlesBackground() {
       init={particlesInit}
       options={{
         fullScreen: { enable: true, zIndex: -1 },
-        background: { color: 'transparent' }, // Transparent to blend with gradient
+        background: { color: 'transparent' },
         particles: {
-          number: { value: 50, density: { enable: true, value_area: 800 } }, // Reduced for performance
-          color: { value: ['#58a6ff', '#a855f7', '#ec4899'] }, // Gradient colors
+          number: { value: 60, density: { enable: true, value_area: 800 } },
+          color: { value: ['#fbbf24', '#b91c1c', '#1e3a8a'] }, // Amber, burgundy, navy for vibrancy
           links: {
             enable: true,
-            color: '#58a6ff',
+            color: '#fbbf24',
             distance: 120,
-            opacity: 0.3,
+            opacity: 0.4,
           },
           move: {
             enable: true,
-            speed: 0.5, // Slower for subtle effect
+            speed: 0.8, // Slightly faster for dynamic effect
             outModes: { default: 'out' },
           },
           size: {
-            value: { min: 1, max: 3 },
+            value: { min: 1, max: 4 },
             random: true,
           },
           opacity: {
-            value: { min: 0.2, max: 0.4 },
+            value: { min: 0.3, max: 0.6 },
             random: true,
           },
         },
@@ -44,12 +44,19 @@ export default function ParticlesBackground() {
               enable: true,
               mode: 'repulse',
             },
+            onClick: {
+              enable: true,
+              mode: 'push',
+            },
             resize: { enable: true },
           },
           modes: {
             repulse: {
-              distance: 80,
+              distance: 100,
               duration: 0.4,
+            },
+            push: {
+              quantity: 4,
             },
           },
         },
