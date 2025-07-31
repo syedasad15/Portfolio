@@ -22,12 +22,12 @@ export default function Home() {
     <div className="bg-charcoal-900 text-gray-100 min-h-screen relative overflow-hidden font-sans">
       <Head>
         <title>Syed Asad Ali Sherazi | AI Engineer Portfolio</title>
-        <meta name="description" content="Portfolio of Syed Asad Ali Sherazi, a Computer Science student specializing in AI, NLP, and MLOps with projects in legal-domain assistants and document Q&A systems." />
-        <meta name="keywords" content="AI Engineer, Machine Learning, NLP, LLMs, Generative AI, MLOps, Portfolio, UET Lahore" />
+        <meta name="description" content="Portfolio of Syed Asad Ali Sherazi, a Computer Science student specializing in AI, NLP, and MLOps with projects in phishing detection, crop identification, lie detection, and document Q&A systems." />
+        <meta name="keywords" content="AI Engineer, Machine Learning, NLP, LLMs, Generative AI, MLOps, Phishing Detection, Crop Detection, Portfolio, UET Lahore" />
         <meta name="author" content="Syed Asad Ali Sherazi" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content="Syed Asad Ali Sherazi | AI Engineer" />
-        <meta property="og:description" content="Explore the portfolio of an AI Engineer skilled in LLMs, Generative AI, and scalable MLOps pipelines." />
+        <meta property="og:description" content="Explore the portfolio of an AI Engineer skilled in phishing detection, crop identification, lie detection, and AI-driven document assistants." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://your-portfolio-url.com" />
         <meta property="og:image" content="/path-to-your-image.jpg" />
@@ -106,7 +106,7 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-base md:text-lg text-gray-200 leading-relaxed"
         >
-          I’m a Computer Science student at UET Lahore (Class of 2027) with hands-on experience in building and deploying AI solutions across NLP, computer vision, and speech analysis. Proficient in Python, PyTorch, TensorFlow, and Scikit-learn, I specialize in large language models, generative AI, and RAG pipelines using tools like GPT-3.5, LangChain, and FAISS. My projects, such as Judiciary GPT and an AI-powered document assistant, demonstrate my ability to create impactful, real-world applications. I’m eager to contribute to innovative AI systems in a collaborative, impact-driven environment.
+          I’m a Computer Science student at UET Lahore (Class of 2027) with hands-on experience in building and deploying AI solutions across NLP, computer vision, and speech analysis. Proficient in Python, PyTorch, TensorFlow, and Scikit-learn, I specialize in large language models, generative AI, and RAG pipelines using tools like GPT-3.5, LangChain, and FAISS. My projects, such as phishing link detection, crop identification, and AI-powered document assistants, demonstrate my ability to create impactful, real-world applications. I’m eager to contribute to innovative AI systems in a collaborative, impact-driven environment.
         </motion.p>
       </section>
 
@@ -149,7 +149,7 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="about" className="py-24 px-6 max-w-4xl mx-auto" role="region" aria-labelledby="experience-heading">
+      <section id="experience" className="py-24 px-6 max-w-4xl mx-auto" role="region" aria-labelledby="experience-heading">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -265,12 +265,19 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             {
-              title: 'Judiciary GPT',
-              description: 'An AI-powered judicial assistant using a multi-agent architecture for legal text analysis and case support. Features prompt routing, NLP pipelines, and modular agents for tasks like judgment drafting and intent classification.',
-              tech: 'LangChain, GPT-3.5, Streamlit',
+              title: 'Phishing Link Detection',
+              description: 'A machine learning system to detect phishing URLs using feature extraction and classification models. Analyzes URL patterns and metadata to identify malicious links with high accuracy.',
+              tech: 'Python, Scikit-learn, Pandas',
               links: [
-                { label: 'App', url: '#' },
-                { label: 'Code', url: '#' },
+                { label: 'Code', url: 'https://github.com/syedasad15/Phishing-Link-Detection-Using-Machine-Learning' },
+              ],
+            },
+            {
+              title: 'Crop Detection',
+              description: 'An AI-powered system for identifying crops using image analysis and machine learning. Processes agricultural imagery to classify crop types, aiding precision farming.',
+              tech: 'Python, TensorFlow, OpenCV',
+              links: [
+                { label: 'Code', url: 'https://github.com/syedasad15/Crop-Detection1' },
               ],
             },
             {
@@ -278,25 +285,24 @@ export default function Home() {
               description: 'A retrieval-augmented generation (RAG) system for contextual Q&A over documents. Built with modular components for document retrieval, memory handling, and prompt engineering, enabling multi-turn interactions.',
               tech: 'LangChain, FAISS, Streamlit',
               links: [
-                { label: 'App', url: '#' },
-                { label: 'Code', url: '#' },
+                { label: 'Code', url: 'https://github.com/syedasad15/AI-Powered-Document-Assistant' },
               ],
             },
             {
               title: 'Smart Resume & Cover Letter Generator',
               description: 'A GPT-3.5-powered app that generates personalized cover letters and resume bullet points from uploaded resumes and job descriptions. Includes resume parsing and one-click export functionality via Streamlit.',
-              tech: 'GPT-3.5, Streamlit',
+              tech: 'GPT-3.5, Streamlit, Python',
               links: [
-                { label: 'App', url: '#' },
-                { label: 'Code', url: '#' },
+                { label: 'Code', url: 'https://github.com/syedasad15/Resume-Generator-App' },
               ],
             },
             {
-              title: 'Text-Based Lie Detection Using BERT',
-              description: 'An NLP system to classify deceptive vs. truthful statements using a fine-tuned BERT model. Integrated LIME for explainability and deployed the application via Streamlit for user interaction.',
-              tech: 'Hugging Face, PyTorch, LIME, Streamlit',
+              title: 'Lie Detection System',
+              description: 'An NLP and audio-based system to classify deceptive vs. truthful statements using fine-tuned BERT for text and audio feature extraction for voice analysis. Integrated LIME for explainability and deployed via Streamlit.',
+              tech: 'Hugging Face, PyTorch, LIME, Librosa, Streamlit',
               links: [
-                { label: 'Code', url: '#' },
+                { label: 'Text-Based Code', url: 'https://github.com/syedasad15/KICS-Internship/tree/master/Lie%20Detection' },
+                { label: 'Voice-Based Code', url: 'https://github.com/syedasad15/Lie-Detection-by-Voice' },
               ],
             },
           ].map((project, index) => (
