@@ -1,14 +1,13 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Optional: custom global styles */
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  background-color: #0f172a; /* dark gray */
+  @apply bg-gradient-to-b from-gray-900 to-charcoal-900;
 }
 
+:root {
+  --charcoal-900: #1a202c;
+  --burgundy-600: #742a2a;
+  --yellow-600: #d69e2e; /* Muted gold */
+}
