@@ -18,7 +18,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen relative overflow-hidden">
+    <div className="bg-charcoal-900 text-gray-100 min-h-screen relative overflow-hidden font-sans">
       <Head>
         <title>Syed Asad Ali Sherazi | AI Engineer Portfolio</title>
         <meta name="description" content="Portfolio of Syed Asad Ali Sherazi, a Computer Science student specializing in AI, NLP, and MLOps with projects in legal-domain assistants and document Q&A systems." />
@@ -31,23 +31,24 @@ export default function Home() {
         <meta property="og:url" content="https://your-portfolio-url.com" />
         <meta property="og:image" content="/path-to-your-image.jpg" />
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
       </Head>
 
       {/* Particle Background */}
       <ParticlesBackground />
 
       {/* Navbar */}
-      <nav className="bg-gray-800/80 backdrop-blur-md p-4 shadow-lg fixed top-0 w-full z-50" role="navigation" aria-label="Main navigation">
-        <ul className="flex justify-center gap-6 font-medium">
+      <nav className="bg-charcoal-800/90 backdrop-blur-md p-4 shadow-lg fixed top-0 w-full z-50" role="navigation" aria-label="Main navigation">
+        <ul className="flex justify-center gap-8 font-semibold text-lg">
           {['About', 'Education', 'Experience', 'Skills', 'Projects', 'Contact'].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
-                className="relative px-2 py-1 text-gray-300 hover:text-yellow-600 transition-colors duration-300 group"
+                className="relative px-3 py-2 text-gray-200 hover:text-amber-400 transition-colors duration-300 group"
                 aria-label={`Navigate to ${item} section`}
               >
                 {item}
-                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-yellow-600 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute left-0 bottom-0 w-0 h-1 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           ))}
@@ -55,12 +56,12 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="h-screen flex flex-col justify-center items-center text-center px-4" role="banner">
+      <section id="hero" className="h-screen flex flex-col justify-center items-center text-center px-6" role="banner">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-burgundy-600 mb-4"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-burgundy-500 mb-6"
         >
           Syed Asad Ali Sherazi
         </motion.h1>
@@ -68,21 +69,21 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg md:text-xl max-w-2xl text-gray-300"
+          className="text-lg md:text-xl max-w-3xl text-gray-200 leading-relaxed"
         >
           AI Engineer | Building Innovative Solutions in NLP, Computer Vision, and MLOps
         </motion.p>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-6 max-w-4xl mx-auto" role="region" aria-labelledby="about-heading">
+      <section id="about" className="py-24 px-6 max-w-4xl mx-auto" role="region" aria-labelledby="about-heading">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           id="about-heading"
-          className="text-3xl font-bold text-yellow-600 mb-6 text-center"
+          className="text-3xl md:text-4xl font-bold text-amber-400 mb-8 text-center"
         >
           About Me
         </motion.h2>
@@ -91,21 +92,21 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-gray-300 leading-relaxed"
+          className="text-base md:text-lg text-gray-200 leading-relaxed"
         >
           I’m a Computer Science student at UET Lahore (Class of 2027) with hands-on experience in building and deploying AI solutions across NLP, computer vision, and speech analysis. Proficient in Python, PyTorch, TensorFlow, and Scikit-learn, I specialize in large language models, generative AI, and RAG pipelines using tools like GPT-3.5, LangChain, and FAISS. My projects, such as Judiciary GPT and an AI-powered document assistant, demonstrate my ability to create impactful, real-world applications. I’m eager to contribute to innovative AI systems in a collaborative, impact-driven environment.
         </motion.p>
       </section>
 
       {/* Education Section */}
-      <section id="education" className="bg-gray-800/50 py-20 px-6" role="region" aria-labelledby="education-heading">
+      <section id="education" className="bg-charcoal-800/50 py-24 px-6" role="region" aria-labelledby="education-heading">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           id="education-heading"
-          className="text-3xl font-bold text-yellow-600 text-center mb-10"
+          className="text-3xl md:text-4xl font-bold text-amber-400 text-center mb-10"
         >
           Education & Certifications
         </motion.h2>
@@ -115,10 +116,10 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-gray-700/30 p-6 rounded-lg border border-gray-600 hover:border-yellow-600 transition-colors duration-300"
+            className="bg-charcoal-700/30 p-6 rounded-lg border border-gray-600 hover:border-amber-400 transition-colors duration-300 shadow-md"
           >
-            <h3 className="text-xl font-semibold text-yellow-600 mb-2">Bachelor of Computer Science</h3>
-            <p className="text-gray-300">University of Engineering and Technology, Lahore</p>
+            <h3 className="text-xl font-semibold text-amber-400 mb-2">Bachelor of Computer Science</h3>
+            <p className="text-gray-200">University of Engineering and Technology, Lahore</p>
             <p className="text-gray-400 text-sm">September 2023 – May 2027 (Completed 4th Semester)</p>
           </motion.div>
           <motion.div
@@ -126,24 +127,24 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-gray-700/30 p-6 rounded-lg border border-gray-600 hover:border-yellow-600 transition-colors duration-300"
+            className="bg-charcoal-700/30 p-6 rounded-lg border border-gray-600 hover:border-amber-400 transition-colors duration-300 shadow-md"
           >
-            <h3 className="text-xl font-semibold text-yellow-600 mb-2">AI-Focused Short Courses</h3>
-            <p className="text-gray-300">Arfa Kareem Incubator & KICS, UET Lahore</p>
+            <h3 className="text-xl font-semibold text-amber-400 mb-2">AI-Focused Short Courses</h3>
+            <p className="text-gray-200">Arfa Kareem Incubator & KICS, UET Lahore</p>
             <p className="text-gray-400 text-sm">3-Month Courses (Completed)</p>
           </motion.div>
         </div>
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 px-6 max-w-4xl mx-auto" role="region" aria-labelledby="experience-heading">
+      <section id="experience" className="py-24 px-6 max-w-4xl mx-auto" role="region" aria-labelledby="experience-heading">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           id="experience-heading"
-          className="text-3xl font-bold text-yellow-600 mb-10 text-center"
+          className="text-3xl md:text-4xl font-bold text-amber-400 mb-10 text-center"
         >
           Work Experience
         </motion.h2>
@@ -180,30 +181,30 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-gray-700/30 p-6 rounded-lg border border-gray-600 hover:border-yellow-600 transition-colors duration-300"
+              className="bg-charcoal-700/30 p-6 rounded-lg border border-gray-600 hover:border-amber-400 transition-colors duration-300 shadow-md"
             >
-              <h3 className="text-xl font-semibold text-yellow-600 mb-2">{job.title}</h3>
-              <p className="text-gray-300">{job.company}</p>
+              <h3 className="text-xl font-semibold text-amber-400 mb-2">{job.title}</h3>
+              <p className="text-gray-200">{job.company}</p>
               <p className="text-gray-400 text-sm mb-3">{job.duration}</p>
-              <p className="text-gray-300 text-sm">{job.description}</p>
+              <p className="text-gray-200 text-base">{job.description}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="bg-gray-800/50 py-20 px-6" role="region" aria-labelledby="skills-heading">
+      <section id="skills" className="bg-charcoal-800/50 py-24 px-6" role="region" aria-labelledby="skills-heading">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           id="skills-heading"
-          className="text-3xl font-bold text-yellow-600 text-center mb-10"
+          className="text-3xl md:text-4xl font-bold text-amber-400 text-center mb-10"
         >
           Skills
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto text-sm">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto text-base">
           {[
             {
               title: 'Programming',
@@ -224,10 +225,10 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-gray-700/30 p-6 rounded-lg border border-gray-600 hover:border-yellow-600 transition-colors duration-300"
+              className="bg-charcoal-700/30 p-6 rounded-lg border border-gray-600 hover:border-amber-400 transition-colors duration-300 shadow-md"
             >
-              <h3 className="text-yellow-600 font-semibold mb-3 text-lg">{category.title}</h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-1">
+              <h3 className="text-xl font-semibold text-amber-400 mb-3">{category.title}</h3>
+              <ul className="list-disc list-inside text-gray-200 space-y-2">
                 {category.items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -238,18 +239,18 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 max-w-6xl mx-auto" role="region" aria-labelledby="projects-heading">
+      <section id="projects" className="py-24 px-6 max-w-6xl mx-auto" role="region" aria-labelledby="projects-heading">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           id="projects-heading"
-          className="text-3xl font-bold text-yellow-600 mb-10 text-center"
+          className="text-3xl md:text-4xl font-bold text-amber-400 mb-10 text-center"
         >
           Projects
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             {
               title: 'Judiciary GPT',
@@ -293,17 +294,17 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-gray-700/30 p-6 rounded-lg border border-gray-600 hover:shadow-xl hover:border-yellow-600 transition-all duration-300"
+              className="bg-charcoal-700/30 p-6 rounded-lg border border-gray-600 hover:shadow-lg hover:border-amber-400 transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold text-yellow-600 mb-2">{project.title}</h3>
-              <p className="text-gray-300 text-sm mb-3">{project.description}</p>
-              <p className="text-gray-400 text-xs mb-3">Tech: {project.tech}</p>
+              <h3 className="text-xl font-semibold text-amber-400 mb-2">{project.title}</h3>
+              <p className="text-gray-200 text-base mb-3">{project.description}</p>
+              <p className="text-gray-400 text-sm mb-3">Tech: {project.tech}</p>
               <div className="flex gap-4">
                 {project.links.map((link) => (
                   <a
                     key={link.label}
                     href={link.url}
-                    className="inline-block px-4 py-2 bg-yellow-600 text-white rounded-md hover:bg-yellow-700 transition-colors duration-300"
+                    className="inline-block px-4 py-2 bg-amber-400 text-charcoal-900 rounded-md hover:bg-amber-500 transition-colors duration-300"
                     aria-label={`View ${project.title} ${link.label}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -318,14 +319,14 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-gray-800/50 py-20 px-6 text-center" role="region" aria-labelledby="contact-heading">
+      <section id="contact" className="bg-charcoal-800/50 py-24 px-6 text-center" role="region" aria-labelledby="contact-heading">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           id="contact-heading"
-          className="text-3xl font-bold text-yellow-600 mb-6"
+          className="text-3xl md:text-4xl font-bold text-amber-400 mb-8"
         >
           Contact Me
         </motion.h2>
@@ -334,33 +335,33 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="max-w-md mx-auto space-y-4"
+          className="max-w-md mx-auto space-y-6"
         >
-          <p className="text-gray-300">
+          <p className="text-gray-200 text-base">
             Email:{' '}
-            <a href="mailto:syedasadalisherazi123@gmail.com" className="text-yellow-600 underline hover:text-yellow-500">
+            <a href="mailto:syedasadalisherazi123@gmail.com" className="text-amber-400 underline hover:text-amber-300">
               syedasadalisherazi123@gmail.com
             </a>
           </p>
-          <p className="text-gray-300">
-            Phone: <span className="text-yellow-600">0323-4961876</span>
+          <p className="text-gray-200 text-base">
+            Phone: <span className="text-amber-400">0323-4961876</span>
           </p>
-          <p className="text-gray-300">
+          <p className="text-gray-200 text-base">
             LinkedIn:{' '}
             <a
               href="https://www.linkedin.com/in/syed-asad-ali-sherazi-4366802a0/"
-              className="text-yellow-600 underline hover:text-yellow-500"
+              className="text-amber-400 underline hover:text-amber-300"
               target="_blank"
               rel="noopener noreferrer"
             >
               Profile
             </a>
           </p>
-          <p className="text-gray-300">
+          <p className="text-gray-200 text-base">
             GitHub:{' '}
             <a
               href="https://github.com/syedasad15"
-              className="text-yellow-600 underline hover:text-yellow-500"
+              className="text-amber-400 underline hover:text-amber-300"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -370,36 +371,36 @@ export default function Home() {
           <a
             href="/resume.pdf"
             download
-            className="inline-block px-6 py-2 bg-yellow-600 text-white rounded-md hover:bg-yellow-700 transition-colors duration-300 mt-4"
+            className="inline-block px-6 py-2 bg-amber-400 text-charcoal-900 rounded-md hover:bg-amber-500 transition-colors duration-300"
             aria-label="Download Resume"
           >
             Download Resume
           </a>
           {/* Client-side Contact Form */}
           <div className="mt-8">
-            <h3 className="text-lg font-semibold text-yellow-600 mb-4">Send a Message</h3>
+            <h3 className="text-lg font-semibold text-amber-400 mb-4">Send a Message</h3>
             <div className="space-y-4">
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full p-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-yellow-600 focus:outline-none"
+                className="w-full p-3 rounded-md bg-charcoal-700 text-gray-100 border border-gray-500 focus:border-amber-400 focus:outline-none"
                 aria-label="Your Name"
               />
               <input
                 type="email"
                 placeholder="Your Email"
-                className="w-full p-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-yellow-600 focus:outline-none"
+                className="w-full p-3 rounded-md bg-charcoal-700 text-gray-100 border border-gray-500 focus:border-amber-400 focus:outline-none"
                 aria-label="Your Email"
               />
               <textarea
                 placeholder="Your Message"
                 rows={4}
-                className="w-full p-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:border-yellow-600 focus:outline-none"
+                className="w-full p-3 rounded-md bg-charcoal-700 text-gray-100 border border-gray-500 focus:border-amber-400 focus:outline-none"
                 aria-label="Your Message"
               ></textarea>
               <button
                 type="button"
-                className="px-6 py-2 bg-yellow-600 text-white rounded-md hover:bg-yellow-700 transition-colors duration-300"
+                className="px-6 py-2 bg-amber-400 text-charcoal-900 rounded-md hover:bg-amber-500 transition-colors duration-300"
                 aria-label="Submit Message"
                 onClick={() => alert('Form submission is client-side only. Please use email for actual contact.')}
               >
