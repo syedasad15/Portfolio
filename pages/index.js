@@ -1,14 +1,18 @@
-
 import Head from 'next/head'
+import ParticlesBackground from '../components/ParticlesBackground'
 
 export default function Home() {
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
+    <div className="bg-gray-900 text-white min-h-screen relative overflow-hidden">
       <Head>
         <title>Syed Asad Ali Sherazi | AI Engineer</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
+      {/* Animated Background */}
+      <ParticlesBackground />
+
+      {/* Navbar */}
       <nav className="bg-gray-800 p-4 shadow-md fixed top-0 w-full z-50">
         <ul className="flex justify-center gap-6">
           <li><a href="#about" className="hover:text-blue-400">About</a></li>
@@ -18,11 +22,15 @@ export default function Home() {
         </ul>
       </nav>
 
+      {/* Hero Section */}
       <section className="h-screen flex flex-col justify-center items-center text-center px-4" id="hero">
         <h1 className="text-4xl md:text-6xl font-bold text-blue-400 mb-4">Syed Asad Ali Sherazi</h1>
-        <p className="text-xl max-w-2xl">AI Engineer | Specializing in LLMs, Generative AI, and Scalable MLOps Pipelines</p>
+        <p className="text-xl max-w-2xl">
+          AI Engineer | Specializing in LLMs, Generative AI, and Scalable MLOps Pipelines
+        </p>
       </section>
 
+      {/* About Section */}
       <section id="about" className="py-20 px-6 max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-blue-300 mb-4">About Me</h2>
         <p>
@@ -30,6 +38,7 @@ export default function Home() {
         </p>
       </section>
 
+      {/* Skills Section */}
       <section id="skills" className="bg-gray-800 py-20 px-6">
         <h2 className="text-3xl font-bold text-blue-300 text-center mb-8">Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto text-sm">
@@ -60,6 +69,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Projects Section */}
       <section id="projects" className="py-20 px-6 max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-blue-300 mb-8">Projects</h2>
         <div className="space-y-6">
@@ -76,6 +86,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Contact Section */}
       <section id="contact" className="bg-gray-800 py-20 px-6 text-center">
         <h2 className="text-3xl font-bold text-blue-300 mb-4">Contact Me</h2>
         <p>Email: <a href="mailto:syedasadalisherazi123@gmail.com" className="text-blue-400 underline">syedasadalisherazi123@gmail.com</a></p>
@@ -85,4 +96,3 @@ export default function Home() {
     </div>
   )
 }
-
