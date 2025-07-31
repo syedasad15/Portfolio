@@ -337,37 +337,33 @@ export default function Home() {
           viewport={{ once: true }}
           className="max-w-md mx-auto space-y-6"
         >
-          <p className="text-gray-200 text-base">
-            Email:{' '}
-            <a href="mailto:syedasadalisherazi123@gmail.com" className="text-amber-400 underline hover:text-amber-300">
-              syedasadalisherazi123@gmail.com
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:syedasadalisherazi123@gmail.com"
+              className="inline-block px-6 py-2 bg-amber-400 text-charcoal-900 rounded-md hover:bg-amber-500 transition-colors duration-300"
+              aria-label="Send email to Syed Asad Ali Sherazi"
+            >
+              Email
             </a>
-          </p>
-          <p className="text-gray-200 text-base">
-            Phone: <span className="text-amber-400">0323-4961876</span>
-          </p>
-          <p className="text-gray-200 text-base">
-            LinkedIn:{' '}
             <a
               href="https://www.linkedin.com/in/syed-asad-ali-sherazi-4366802a0/"
-              className="text-amber-400 underline hover:text-amber-300"
+              className="inline-block px-6 py-2 bg-amber-400 text-charcoal-900 rounded-md hover:bg-amber-500 transition-colors duration-300"
+              aria-label="Visit Syed Asad Ali Sherazi's LinkedIn profile"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Profile
+              LinkedIn
             </a>
-          </p>
-          <p className="text-gray-200 text-base">
-            GitHub:{' '}
             <a
               href="https://github.com/syedasad15"
-              className="text-amber-400 underline hover:text-amber-300"
+              className="inline-block px-6 py-2 bg-amber-400 text-charcoal-900 rounded-md hover:bg-amber-500 transition-colors duration-300"
+              aria-label="Visit Syed Asad Ali Sherazi's GitHub profile"
               target="_blank"
               rel="noopener noreferrer"
             >
-              syedasad15
+              GitHub
             </a>
-          </p>
+          </div>
           <a
             href="/resume.pdf"
             download
