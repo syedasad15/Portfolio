@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ParticlesBackground from '../components/ParticlesBackground';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export default function Home() {
   // Smooth scroll for anchor links
@@ -340,28 +341,28 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:syedasadalisherazi123@gmail.com"
-              className="inline-block px-6 py-2 bg-amber-400 text-charcoal-900 rounded-md hover:bg-amber-500 transition-colors duration-300"
+              className="inline-flex items-center px-6 py-2 bg-amber-400 text-charcoal-900 rounded-md hover:bg-amber-500 transition-colors duration-300"
               aria-label="Send email to Syed Asad Ali Sherazi"
             >
-              Email
+              <FaEnvelope className="mr-2" /> Email
             </a>
             <a
               href="https://www.linkedin.com/in/syed-asad-ali-sherazi-4366802a0/"
-              className="inline-block px-6 py-2 bg-amber-400 text-charcoal-900 rounded-md hover:bg-amber-500 transition-colors duration-300"
+              className="inline-flex items-center px-6 py-2 bg-amber-400 text-charcoal-900 rounded-md hover:bg-amber-500 transition-colors duration-300"
               aria-label="Visit Syed Asad Ali Sherazi's LinkedIn profile"
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn
+              <FaLinkedin className="mr-2" /> LinkedIn
             </a>
             <a
               href="https://github.com/syedasad15"
-              className="inline-block px-6 py-2 bg-amber-400 text-charcoal-900 rounded-md hover:bg-amber-500 transition-colors duration-300"
+              className="inline-flex items-center px-6 py-2 bg-amber-400 text-charcoal-900 rounded-md hover:bg-amber-500 transition-colors duration-300"
               aria-label="Visit Syed Asad Ali Sherazi's GitHub profile"
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub
+              <FaGithub className="mr-2" /> GitHub
             </a>
           </div>
           <a
