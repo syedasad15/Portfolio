@@ -53,19 +53,19 @@ export default function Home() {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href="/Syed Asad Ali Sherazi.pdf"
-              download
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative px-3 py-2 text-gray-200 hover:text-amber-400 transition-colors duration-300 group inline-flex items-center"
-              aria-label="Download Resume"
-            >
-              <FaFileDownload className="mr-2" /> Resume
-              <span className="absolute left-0 bottom-0 w-0 h-1 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-          </li>
+          // <li>
+          //   <a
+          //     href="/Syed Asad Ali Sherazi.pdf"
+          //     download
+          //     target="_blank"
+          //     rel="noopener noreferrer"
+          //     className="relative px-3 py-2 text-gray-200 hover:text-amber-400 transition-colors duration-300 group inline-flex items-center"
+          //     aria-label="Download Resume"
+          //   >
+          //     <FaFileDownload className="mr-2" /> Resume
+          //     <span className="absolute left-0 bottom-0 w-0 h-1 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
+          //   </a>
+          // </li>
         </ul>
       </nav>
 
