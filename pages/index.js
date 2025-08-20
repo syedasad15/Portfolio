@@ -678,7 +678,7 @@ export default function Home() {
               description: 'An AI-powered judicial assistant leveraging a multi-agent architecture for legal text analysis and case support. Features include prompt routing, NLP pipelines, and modular agents for tasks like judgment drafting and intent classification, enhancing legal workflow efficiency.',
               tech: 'LangChain, GPT-3.5, Streamlit, Python',
               links: [
-                { label: 'Demo', url: 'https://judicairy-gpt-pvqkbhm2p83pvw8hcvf3zc.streamlit.app/' },
+                { label: 'Demo', url: 'https://judgegpt-ncai-222957019725.europe-west1.run.app/' },
                 { label: 'Code', url: 'https://github.com/syedasad15/Judicairy-GPT' },
               ],
             },
