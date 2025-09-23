@@ -515,7 +515,7 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-base md:text-lg text-gray-200 leading-relaxed"
         >
-          I’m a Computer Science student at UET Lahore (Class of 2027) with expertise in building and deploying AI solutions across NLP, computer vision, speech analysis, and cybersecurity. Proficient in Python, C++, PyTorch, TensorFlow, Scikit-learn, and tools like GPT-3.5, LangChain, FAISS, Hugging Face Transformers, and Streamlit, I specialize in large language models, generative AI, RAG pipelines, and multi-agent architectures. My projects, including Judiciary GPT, an AI-powered document assistant, and a smart resume generator, showcase my ability to deliver impactful, user-facing applications. I’m passionate about contributing to innovative AI systems in a collaborative, high-impact environment.
+          I’m a Computer Science student at UET Lahore (Class of 2027) with expertise in building and deploying AI solutions across NLP, computer vision, speech analysis, and cybersecurity. Proficient in Python, C++, PyTorch, TensorFlow, Scikit-learn, and tools like GPT-3.5, LangChain, FAISS, Hugging Face Transformers, and Streamlit, I specialize in large language models, generative AI, RAG pipelines, and multi-agent architectures. My projects, including an AI-powered document assistant, and a smart resume generator, showcase my ability to deliver impactful, user-facing applications. I’m passionate about contributing to innovative AI systems in a collaborative, high-impact environment.
         </motion.p>
       </section>
 
@@ -673,15 +673,7 @@ export default function Home() {
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
-            {
-              title: 'Judiciary GPT',
-              description: 'An AI-powered judicial assistant leveraging a multi-agent architecture for legal text analysis and case support. Features include prompt routing, NLP pipelines, and modular agents for tasks like judgment drafting and intent classification, enhancing legal workflow efficiency.',
-              tech: 'LangChain, GPT-3.5, Streamlit, Python',
-              links: [
-                { label: 'Demo', url: 'https://judgegpt-ncai-222957019725.europe-west1.run.app/' },
-                { label: 'Code', url: 'https://github.com/syedasad15/Judicairy-GPT' },
-              ],
-            },
+          ,
             {
               title: 'AI-Powered Document Assistant',
               description: 'A retrieval-augmented generation (RAG) system for contextual Q&A over documents. Built with modular components for document retrieval, memory handling, and prompt engineering, enabling multi-turn interactions for efficient document processing.',
