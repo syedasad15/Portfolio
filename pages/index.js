@@ -585,7 +585,7 @@ export default function Home() {
             {
               title: 'AI/ML Intern',
               company: 'National Centre of Artificial Intelligence, UET Lahore',
-              duration: 'June 2025 – Present',
+              duration: 'June 2025 – September 2025',
               description: 'Assisting in the development and optimization of machine learning models for AI research projects. Collaborating with researchers to implement and test AI solutions using Python and frameworks like PyTorch and LangChain.',
             },
             {
