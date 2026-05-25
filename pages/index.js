@@ -571,6 +571,17 @@ export default function Home() {
         </motion.h2>
         <div className="space-y-6">
           {[
+
+
+            {
+  title: 'AI Researcher & Engineer (Project Based)',
+  company: 'SOCO Engineers GmbH',
+  duration: 'Aug 2025 – Apr 2026',
+  description:
+    'Built a pipeline converting Nastran FEM models into graph datasets for machine learning. Developed Graph Neural Networks using PyTorch Geometric to predict structural simulation outputs and applied GNNExplainer for interpretability. Worked on AI research, surrogate modeling, Neural Operators, PINNs, XAI, and DeepONet architectures using complex mesh-based automobile simulation data.',
+},
+
+            
             {
               title: 'AI/ML Intern',
               company: 'National Centre of Artificial Intelligence, UET Lahore',
